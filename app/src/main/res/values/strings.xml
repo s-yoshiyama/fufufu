@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">FuFuFu</string>
+
+    <string name="host">親</string>
+    <string name="players">子</string>
+
+    <string name="pick">ツモ</string>
+    <string name="win">ロン</string>
+
+    <string name="han">飜</string>
+
+    <string name="pinfu">平和</string>
+    <string name="titoi">七対子</string>
+
+    <string name="ryansyan">両面・シャンポン</string>
+
+    <string name="minko">明刻</string>
+    <string name="anko">暗刻</string>
+    <string name="minkan">明槓</string>
+    <string name="ankan">暗槓</string>
+    <string name="quantity">個</string>
+
+    <string name="janto_zikazebakaze">自風/場風</string>
+    <string name="janto_yakuhai">役牌</string>
+    <string name="janto_others">その他</string>
+
+    <string name="others">その他</string>
+    <string name="calc">計算</string>
+    <string name="reset">リセット</string>
+
 </resources>
