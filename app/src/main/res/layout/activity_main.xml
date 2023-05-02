@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <ScrollView
+        android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
@@ -27,196 +28,261 @@
                 android:orientation="vertical">
 
 <!--                親子-->
-                <RadioGroup
-                    android:id="@+id/parentChild"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:checkedButton="@id/parentChild_child">
+                    android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/parentChild_parent"
-                        android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/host"/>
+                        android:autoSizeTextType="uniform"
+                        android:text="@string/host_players"/>
 
-                    <RadioButton
-                        android:id="@+id/parentChild_child"
-                        android:layout_width="wrap_content"
+                    <RadioGroup
+                        android:id="@+id/parentChild"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/players"/>
+                        android:orientation="horizontal"
+                        android:checkedButton="@id/parentChild_child">
 
-                </RadioGroup>
+                        <RadioButton
+                            android:id="@+id/parentChild_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/host"/>
+
+                        <RadioButton
+                            android:id="@+id/parentChild_child"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/players"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
 
 <!--                ロンツモ-->
-                <RadioGroup
-                    android:id="@+id/win"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:checkedButton="@id/win_pick">
+                    android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/win_pick"
-                        android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/pick"/>
+                        android:text="@string/wintype"/>
 
-                    <RadioButton
-                        android:id="@+id/win_win"
-                        android:layout_width="wrap_content"
+                    <RadioGroup
+                        android:id="@+id/win"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/win"/>
+                        android:orientation="horizontal"
+                        android:checkedButton="@id/win_pick">
 
-                </RadioGroup>
+                        <RadioButton
+                            android:id="@+id/win_pick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wintype_pick"/>
+
+                        <RadioButton
+                            android:id="@+id/win_win"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wintype_win"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
 
 <!--                飜数-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <NumberPicker
-                        android:id="@+id/han_numpick"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"/>
+                    android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center_vertical"
-                        android:text="@string/han"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoSizeTextType="uniform"
+                        android:text="@string/hansu"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <NumberPicker
+                            android:id="@+id/han_numpick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="@string/han"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
 <!--                上がり方-->
-                <RadioGroup
-                    android:id="@+id/yaku"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:checkedButton="@id/yaku_others"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/yaku_pinfu"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="@string/pinfu"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoSizeTextType="uniform"
+                        android:text="@string/yaku"/>
 
-                    <RadioButton
-                        android:id="@+id/yaku_titoi"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="@string/titoi"/>
+                    <RadioGroup
+                        android:id="@+id/yaku"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checkedButton="@id/yaku_others"
+                        android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/yaku_others"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="@string/others"/>
+                        <RadioButton
+                            android:id="@+id/yaku_pinfu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/pinfu"/>
 
-                </RadioGroup>
+                        <RadioButton
+                            android:id="@+id/yaku_titoi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/titoi"/>
+
+                        <RadioButton
+                            android:id="@+id/yaku_others"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/others"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
 
 <!--                2~8-->
                 <LinearLayout
-                    android:id="@+id/suhai_mentsu"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/suhai"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
-                    <LinearLayout
-                        android:id="@+id/suhai_mentus_minko"
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/minko"/>
-
-                        <NumberPicker
-                            android:id="@+id/suhai_mentsu_minko_numpick"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/quantity"/>
-
-                    </LinearLayout>
+                        android:text="@string/suhai"
+                        android:autoSizeTextType="uniform"/>
 
                     <LinearLayout
-                        android:id="@+id/suhai_mentus_anko"
+                        android:id="@+id/suhai_mentsu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
+                        android:orientation="horizontal">
 
-                        <TextView
+                        <LinearLayout
+                            android:id="@+id/suhai_mentus_minko"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/anko"/>
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
 
-                        <NumberPicker
-                            android:id="@+id/suhai_mentsu_anko_numpick"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/minko"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/quantity"/>
+                            <NumberPicker
+                                android:id="@+id/suhai_mentsu_minko_numpick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
 
-                    </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/quantity"/>
 
-                    <LinearLayout
-                        android:id="@+id/suhai_mentus_minkan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
+                        </LinearLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/minkan"/>
-
-                        <NumberPicker
-                            android:id="@+id/suhai_mentsu_minkan_numpick"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-
-                        <TextView
+                        <LinearLayout
+                            android:id="@+id/suhai_mentus_anko"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/quantity"/>
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
 
-                    </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/anko"/>
 
-                    <LinearLayout
-                        android:id="@+id/suhai_mentus_ankan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
+                            <NumberPicker
+                                android:id="@+id/suhai_mentsu_anko_numpick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
 
-                        <TextView
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/quantity"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/suhai_mentus_minkan"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/ankan"/>
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
 
-                        <NumberPicker
-                            android:id="@+id/suhai_mentsu_ankan_numpick"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/minkan"/>
 
-                        <TextView
+                            <NumberPicker
+                                android:id="@+id/suhai_mentsu_minkan_numpick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/quantity"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/suhai_mentus_ankan"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/quantity"/>
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ankan"/>
+
+                            <NumberPicker
+                                android:id="@+id/suhai_mentsu_ankan_numpick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/quantity"/>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -225,161 +291,202 @@
 
 <!--                19字牌-->
                 <LinearLayout
-                    android:id="@+id/zihai_mentsu"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/zihai"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
-                    <LinearLayout
-                        android:id="@+id/zihai_mentus_minko"
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/minko"/>
-
-                        <NumberPicker
-                            android:id="@+id/zihai_mentsu_minko_numpick"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/quantity"/>
-
-                    </LinearLayout>
+                        android:text="@string/zihai"
+                        android:autoSizeTextType="uniform"/>
 
                     <LinearLayout
-                        android:id="@+id/zihai_mentus_anko"
+                        android:id="@+id/zihai_mentsu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
+                        android:orientation="horizontal">
 
-                        <TextView
+                        <LinearLayout
+                            android:id="@+id/zihai_mentus_minko"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/anko"/>
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
 
-                        <NumberPicker
-                            android:id="@+id/zihai_mentsu_anko_numpick"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/minko"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/quantity"/>
+                            <NumberPicker
+                                android:id="@+id/zihai_mentsu_minko_numpick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
 
-                    </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/quantity"/>
 
-                    <LinearLayout
-                        android:id="@+id/zihai_mentus_minkan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
+                        </LinearLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/minkan"/>
-
-                        <NumberPicker
-                            android:id="@+id/zihai_mentsu_minkan_numpick"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-
-                        <TextView
+                        <LinearLayout
+                            android:id="@+id/zihai_mentus_anko"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/quantity"/>
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
 
-                    </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/anko"/>
 
-                    <LinearLayout
-                        android:id="@+id/zihai_mentus_ankan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
+                            <NumberPicker
+                                android:id="@+id/zihai_mentsu_anko_numpick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
 
-                        <TextView
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/quantity"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/zihai_mentus_minkan"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/ankan"/>
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
 
-                        <NumberPicker
-                            android:id="@+id/zihai_mentsu_ankan_numpick"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/minkan"/>
 
-                        <TextView
+                            <NumberPicker
+                                android:id="@+id/zihai_mentsu_minkan_numpick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/quantity"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/zihai_mentus_ankan"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/quantity"/>
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ankan"/>
+
+                            <NumberPicker
+                                android:id="@+id/zihai_mentsu_ankan_numpick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/quantity"/>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                 </LinearLayout>
 
 <!--                待ち-->
-                <RadioGroup
+                <LinearLayout
                     android:id="@+id/wait"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:checkedButton="@id/wait_ryansyan">
+                    android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/wait_ryansyan"
-                        android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/ryansyan"/>
+                        android:text="@string/wait"
+                        android:autoSizeTextType="uniform"/>
 
-                    <RadioButton
-                        android:id="@+id/wait_others"
-                        android:layout_width="wrap_content"
+                    <RadioGroup
+                        android:id="@+id/wait_group"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/others"/>
+                        android:orientation="horizontal"
+                        android:checkedButton="@id/wait_group_ryansyan">
 
-                </RadioGroup>
+                        <RadioButton
+                            android:id="@+id/wait_group_ryansyan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ryansyan"/>
+
+                        <RadioButton
+                            android:id="@+id/wait_group_others"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/others"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
 
 <!--                雀頭-->
-                <RadioGroup
+                <LinearLayout
                     android:id="@+id/janto"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:checkedButton="@id/janto_others">
+                    android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/janto_zikazebakaze"
-                        android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/janto_zikazebakaze"/>
+                        android:text="@string/janto"/>
 
-                    <RadioButton
-                        android:id="@+id/janto_yakuhai"
-                        android:layout_width="wrap_content"
+                    <RadioGroup
+                        android:id="@+id/janto_group"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/janto_yakuhai"/>
+                        android:orientation="horizontal"
+                        android:checkedButton="@id/janto_others">
 
-                    <RadioButton
-                        android:id="@+id/janto_others"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/janto_others"/>
+                        <RadioButton
+                            android:id="@+id/janto_zikazebakaze"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/janto_zikazebakaze"/>
 
-                </RadioGroup>
+                        <RadioButton
+                            android:id="@+id/janto_yakuhai"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/janto_yakuhai"/>
+
+                        <RadioButton
+                            android:id="@+id/janto_others"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/janto_others"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
 
 <!--                その他-->
-                <LinearLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -388,15 +495,24 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:autoSizeTextType="uniform"
-                        android:text="@string/calc"/>
+                        android:text="@string/calc"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/reset"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
                     <Button
+                        android:id="@+id/reset"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:autoSizeTextType="uniform"
-                        android:text="@string/reset"/>
+                        android:text="@string/reset"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/calc"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
-                </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
 <!--            計算結果-->
                 <LinearLayout
